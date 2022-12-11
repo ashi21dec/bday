@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
 
+<link href="https://fonts.cdnfonts.com/css/snell-roundhand" rel="stylesheet">
+
+
+<style>
+body{
+font-family: 'Snell Roundhand', sans-serif;
+font-size: 40px;
+background-image: url("abc.jpg");
+background-size: cover;
+
+}
+
+.form_inp{
+margin-left:30px;
+font-size: 30px;
+}
+
+</style>
+</head>
+<div style="background-color:rgba(0, 0, 0, 0.1);">
+
+<body>
+
+<h1 style="margin-left:30px;">Hey Friend!!</h1>
+
+<div class="form_inp">
+
+ <p style="margin-left:10px; font-size: 30px;">Thankyou for visiting this page. Please fill this up and we all together will give something unique as birthday surprise to Priyal...</p>
+
+  <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+
+	  <p style="background-color: powderblue; font-family: Arial, Helvetica, sans-serif; font-size: 20px; padding-left:20px;"> Basic Information</p>
+    	  <p><label for="name">* Your Full name</label>
+        <input type="text" name="full_name" required="required" /></p>
+
+
+		<p><label for="birthday">* Your Birthday</label>
+        <input type="date" name="birthday" required="required" /></p>
+
+		<p><label for="hometown">* Your Hometown</label>
+        <input type="text" name="hometown" required="required" /></p>
+
+
+		<p style="background-color: powderblue; font-family: Arial, Helvetica, sans-serif; font-size: 20px; padding-left:20px;"> Share some of your favourite memories with Priyal</p>
+
+		 <p><label for="related">* How did you meet Priyal?</label>
+		<select id="related" name="related">
+		<option value="value" selected>Choose from the dropdown</option>
+  		<option value="school">We were in the same school</option>
+  		<option value="college">We were in the same college</option>
+  		<option value="coaching">We were in the same coaching</option>
+		<option value="colony">We lived in the same colony before</option>
+		<option value="cousin">She is my cousin</option>
+		<option value="others">Others</option>
+	</select></p>
+
+		<p><label for="f_place">* Your Favourite Place to hangout with Priyal</label>
+        <input type="text" name="f_place" required="required" /></p>
+
+		<p><label for="f_curse">* What is the most frequently used curse word by Priyal?</label>
+        <input type="text" name="f_curse" required="required" /></p>
+
+		<p><label for="f_one">* Describe Priyal in one word.</label>
+        <input type="text" name="f_one" required="required" /></p>
+
+
+		<p><label for="f_memory">* Your best memory with Priyal</label>
+        <input type="text" name="f_memory" required="required" /></p>
+
+		<p><label for="f_love">* One thing you love about Priyal.</label>
+        <input type="text" name="f_love" required="required" /></p>
+
+		<p style="background-color: powderblue; font-family: Arial, Helvetica, sans-serif; font-size: 20px; padding-left:20px;"> Pictures</p>
+
+		<p><label for="photos">* Do you have any photos to share? (multiple entries allowed)</label></p>
+        <p><input type="file" name="photos" multiple="multiple" /></p>
+
+		<div style="text-align:center;">
+
+		<p><input type="submit" value="Submit Form" style = "font-size:30px; background-color: powderblue"></p>
+
+		<br>
+		<br>
+		<br>
+		</div>
+		
+         </form>
+
+</div>
+
+
+</body>
+</div>
+</html>
